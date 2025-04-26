@@ -2,10 +2,10 @@ require_relative 'string_calculator'
 
 RSpec.describe StringCalculator do
   describe "#add" do
-    it "returns the sum of multiple numbers" do
-        expect(StringCalculator.new.add("1,2,3,4")).to eq(10)
+    it "handles newlines between numbers" do
+        expect(StringCalculator.new.add("1\n2,3")).to eq(6)
     end
   end
 end
 
-# Rspec test case to support multiple numbers.
+# Rspec test case to support newline as separator.
