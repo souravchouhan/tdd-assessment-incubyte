@@ -2,8 +2,8 @@ class StringCalculator
   def add(numbers)
     return 0 if numbers.empty?
 
-    numbers.to_i
+    numbers.split(",").map(&:to_i).sum
   end
 end
 
-# Ruby file of implementation to handle single number input
+# Ruby file of implementation to handle two comma-separated numbers.
